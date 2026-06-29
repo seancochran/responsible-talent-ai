@@ -19,6 +19,12 @@ wd = WorkdayClient(DATA)
 ont = Ontology.load(DATA / "ontology.json")
 ef = EightfoldClient(wd.list_open_seats(), ont)
 
+SEAT_TITLES = {s["id"]: s["title"] for s in wd.list_open_seats()}
+
+def seat_names(ids):
+    """Render seat ids as human titles for the fairness banner."""
+    return ", ".join(SEAT_TITLES.get(i, i) for i in ids) or "none"
+
 st.title("Roster — right people, right seats, proven")
 st.caption(f"Trust layer over Workday + Eightfold (mock). {llm.status()}")
 
@@ -45,8 +51,8 @@ if page == "Decision":
     cf = rec.counterfactual
     if cf.treatment_flag:
         st.error(f"⚠ Disparate treatment on `{cf.attribute}`: surfaced stretch seats changed "
-                 f"{cf.original_stretch_seats} → {cf.twin_stretch_seats} when only the protected "
-                 f"attribute was flipped.")
+                 f"from [{seat_names(cf.original_stretch_seats)}] to "
+                 f"[{seat_names(cf.twin_stretch_seats)}] when only the protected attribute was flipped.")
     else:
         st.success("No treatment flip detected on the tested attribute.")
     st.write("Aggregate impact (four-fifths on stretch-seat surfacing):")
@@ -71,9 +77,11 @@ else:
     st.subheader("Outcomes, not activity")
     c1, c2, c3 = st.columns(3)
     c1.metric("Regrettable attrition", f"{df['regrettable_attrition_rate'].iloc[-1]:.0%}",
-              delta=f"{(df['regrettable_attrition_rate'].iloc[-1]-df['regrettable_attrition_rate'].iloc[0]):.0%}")
+              delta=f"{(df['regrettable_attrition_rate'].iloc[-1]-df['regrettable_attrition_rate'].iloc[0]):.0%}",
+              delta_color="inverse")  # attrition down = good (green)
     c2.metric("Time-to-productivity (days)", int(df['time_to_productivity_days'].iloc[-1]),
-              delta=int(df['time_to_productivity_days'].iloc[-1]-df['time_to_productivity_days'].iloc[0]))
+              delta=int(df['time_to_productivity_days'].iloc[-1]-df['time_to_productivity_days'].iloc[0]),
+              delta_color="inverse")  # fewer days = good (green)
     c3.metric("Internal-fill rate", f"{df['internal_fill_rate'].iloc[-1]:.0%}",
               delta=f"{(df['internal_fill_rate'].iloc[-1]-df['internal_fill_rate'].iloc[0]):.0%}")
 
