@@ -65,3 +65,23 @@ if page == "Decision":
                        data=__import__("json").dumps(record_to_dict(rec), indent=2),
                        file_name=f"roster_record_{wid}.json")
     st.caption(rec.caveat)
+else:
+    import pandas as pd
+    df = pd.DataFrame(wd.get_outcomes()).set_index("month")
+    st.subheader("Outcomes, not activity")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Regrettable attrition", f"{df['regrettable_attrition_rate'].iloc[-1]:.0%}",
+              delta=f"{(df['regrettable_attrition_rate'].iloc[-1]-df['regrettable_attrition_rate'].iloc[0]):.0%}")
+    c2.metric("Time-to-productivity (days)", int(df['time_to_productivity_days'].iloc[-1]),
+              delta=int(df['time_to_productivity_days'].iloc[-1]-df['time_to_productivity_days'].iloc[0]))
+    c3.metric("Internal-fill rate", f"{df['internal_fill_rate'].iloc[-1]:.0%}",
+              delta=f"{(df['internal_fill_rate'].iloc[-1]-df['internal_fill_rate'].iloc[0]):.0%}")
+
+    st.markdown("**Activity (context, not the goal)**")
+    st.bar_chart(df[["matches_surfaced", "placements"]])
+    st.markdown("**Outcome trends**")
+    st.line_chart(df[["regrettable_attrition_rate", "internal_fill_rate"]])
+    st.markdown("**Fairness drift — opportunity impact ratio (target ≥ 0.80)**")
+    st.line_chart(df[["opportunity_impact_ratio"]])
+    st.markdown("**Trust — human override rate**")
+    st.line_chart(df[["override_rate"]])
