@@ -31,7 +31,7 @@ def build():
             _artifact(3, "doc", "ETL pipeline + warehouse dbt design", "2026-04-10"),
             _artifact(4, "pr", "Python pandas refactor with pytest", "2026-06-01"),
         ],
-        "self_reported_skills": ["Python", "Data Engineering"],  # NOTE: no LLM claim
+        "self_reported_skills": ["Python", "Data Engineering", "Machine Learning"],  # NOTE: no LLM claim
         "protected": {"gender": "F", "age_band": "50+", "ethnicity": "Hispanic"},
     })
     names = ["Alex Kim","Sam Patel","Jordan Lee","Riley Cohen","Casey Wong","Drew Olsen",

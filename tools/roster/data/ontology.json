@@ -1,0 +1,73 @@
+[
+  {
+    "aliases": [
+      "python",
+      "pytest",
+      "pandas"
+    ],
+    "name": "Python",
+    "skill_id": "py"
+  },
+  {
+    "aliases": [
+      "machine learning",
+      "model",
+      "scikit",
+      "training"
+    ],
+    "name": "Machine Learning",
+    "skill_id": "ml"
+  },
+  {
+    "aliases": [
+      "llm",
+      "prompt",
+      "rag",
+      "agent",
+      "langgraph"
+    ],
+    "name": "LLM Engineering",
+    "skill_id": "llm"
+  },
+  {
+    "aliases": [
+      "sql",
+      "etl",
+      "pipeline",
+      "warehouse",
+      "dbt"
+    ],
+    "name": "Data Engineering",
+    "skill_id": "data"
+  },
+  {
+    "aliases": [
+      "led",
+      "mentored",
+      "roadmap",
+      "stakeholder"
+    ],
+    "name": "Technical Leadership",
+    "skill_id": "lead"
+  },
+  {
+    "aliases": [
+      "aws",
+      "terraform",
+      "bedrock",
+      "infra"
+    ],
+    "name": "Cloud Architecture",
+    "skill_id": "cloud"
+  },
+  {
+    "aliases": [
+      "react",
+      "typescript",
+      "ui",
+      "streamlit"
+    ],
+    "name": "Frontend",
+    "skill_id": "fe"
+  }
+]

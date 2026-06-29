@@ -1,0 +1,54 @@
+[
+  {
+    "id": "s-llm-lead",
+    "required_skills": [
+      "llm",
+      "lead",
+      "py"
+    ],
+    "stretch": true,
+    "title": "LLM Platform Lead (stretch)",
+    "type": "gig"
+  },
+  {
+    "id": "s-ml-stretch",
+    "required_skills": [
+      "ml",
+      "lead",
+      "py"
+    ],
+    "stretch": true,
+    "title": "ML Tech Lead (stretch)",
+    "type": "gig"
+  },
+  {
+    "id": "s-data",
+    "required_skills": [
+      "data",
+      "py"
+    ],
+    "stretch": false,
+    "title": "Senior Data Engineer",
+    "type": "role"
+  },
+  {
+    "id": "s-cloud",
+    "required_skills": [
+      "cloud",
+      "py"
+    ],
+    "stretch": false,
+    "title": "Cloud Architect",
+    "type": "role"
+  },
+  {
+    "id": "s-fe",
+    "required_skills": [
+      "fe",
+      "py"
+    ],
+    "stretch": false,
+    "title": "Frontend Engineer",
+    "type": "role"
+  }
+]
