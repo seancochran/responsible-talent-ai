@@ -1,6 +1,7 @@
 from datetime import date
 from pathlib import Path
 from src.ontology import Ontology
+from src.models import Reconciliation
 import src.skills_intelligence as si
 
 ONT = Ontology.load(Path(__file__).resolve().parents[1] / "data" / "ontology.json")
@@ -35,3 +36,9 @@ def test_proficiency_uses_type_weight():
     s_pr = si.score_skill("py", refs_pr["py"], ONT, today=date(2026,6,2))
     s_co = si.score_skill("py", refs_co["py"], ONT, today=date(2026,6,2))
     assert s_pr.proficiency > s_co.proficiency
+
+def test_reconcile_flags_hidden_strength_and_gap():
+    p = si.build_profile(WORKER, ONT, today=date(2026, 6, 11))   # evidences py + llm
+    rec = si.reconcile(p, WORKER["self_reported_skills"], ONT)   # self-reported: Python only
+    assert "LLM Engineering" in rec.hidden_strengths   # evidenced, never claimed
+    assert "Python" not in rec.gaps                    # claimed AND evidenced

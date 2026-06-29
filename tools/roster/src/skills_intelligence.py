@@ -1,6 +1,6 @@
 from __future__ import annotations
 from datetime import date
-from .models import EvidenceRef, SkillScore, EvidenceProfile
+from .models import EvidenceRef, SkillScore, EvidenceProfile, Reconciliation
 from .ontology import Ontology
 
 TYPE_WEIGHTS = {"pr": 0.4, "doc": 0.25, "commit": 0.2, "ticket": 0.15}
@@ -32,3 +32,11 @@ def build_profile(worker: dict, ontology: Ontology, today: date) -> EvidenceProf
         skills.append(s)
     skills.sort(key=lambda s: (-s.proficiency, s.recency_days))
     return EvidenceProfile(worker_id=worker["id"], skills=skills)
+
+def reconcile(profile, self_reported_names: list[str], ontology: Ontology) -> Reconciliation:
+    claimed_ids = {ontology.id_for_name(n) for n in self_reported_names}
+    claimed_ids.discard(None)
+    evidenced_ids = profile.skill_ids()
+    gaps = sorted(ontology.name(i) for i in claimed_ids - evidenced_ids)
+    hidden = sorted(ontology.name(i) for i in evidenced_ids - claimed_ids)
+    return Reconciliation(gaps=gaps, hidden_strengths=hidden)
