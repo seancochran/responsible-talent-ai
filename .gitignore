@@ -1,8 +1,15 @@
+# Secrets — never commit
 .env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python
 __pycache__/
 *.pyc
+.pytest_cache/
 .venv/
 venv/
-.pytest_cache/
+
+# OS
 .DS_Store
-.streamlit/secrets.toml
