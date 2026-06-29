@@ -1,0 +1,362 @@
+[
+  {
+    "artifacts": [
+      {
+        "date": "2026-05-20",
+        "id": "a1",
+        "text": "Built a RAG agent with LangGraph and prompt routing",
+        "type": "pr"
+      },
+      {
+        "date": "2026-05-02",
+        "id": "a2",
+        "text": "tune retrieval model training loop",
+        "type": "commit"
+      },
+      {
+        "date": "2026-04-10",
+        "id": "a3",
+        "text": "ETL pipeline + warehouse dbt design",
+        "type": "doc"
+      },
+      {
+        "date": "2026-06-01",
+        "id": "a4",
+        "text": "Python pandas refactor with pytest",
+        "type": "pr"
+      }
+    ],
+    "current_role": "Data Engineer",
+    "id": "w-maria",
+    "name": "Maria Alvarez",
+    "protected": {
+      "age_band": "50+",
+      "ethnicity": "Hispanic",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Python",
+      "Data Engineering"
+    ],
+    "tenure_years": 7
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-01-10",
+        "id": "a100",
+        "text": "python pandas pytest refactor",
+        "type": "pr"
+      },
+      {
+        "date": "2026-01-11",
+        "id": "a101",
+        "text": "model training scikit",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Software Engineer",
+    "id": "w-0",
+    "name": "Alex Kim",
+    "protected": {
+      "age_band": "20-29",
+      "ethnicity": "White",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "tenure_years": 2
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-02-10",
+        "id": "a110",
+        "text": "python pandas pytest refactor",
+        "type": "pr"
+      },
+      {
+        "date": "2026-02-11",
+        "id": "a111",
+        "text": "llm prompt rag agent",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Data Engineer",
+    "id": "w-1",
+    "name": "Sam Patel",
+    "protected": {
+      "age_band": "30-39",
+      "ethnicity": "Black",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Python",
+      "LLM Engineering"
+    ],
+    "tenure_years": 3
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-03-10",
+        "id": "a120",
+        "text": "sql etl pipeline dbt",
+        "type": "pr"
+      },
+      {
+        "date": "2026-03-11",
+        "id": "a121",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "ML Engineer",
+    "id": "w-2",
+    "name": "Jordan Lee",
+    "protected": {
+      "age_band": "40-49",
+      "ethnicity": "Asian",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Data Engineering",
+      "Python"
+    ],
+    "tenure_years": 4
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-04-10",
+        "id": "a130",
+        "text": "aws terraform bedrock infra",
+        "type": "pr"
+      },
+      {
+        "date": "2026-04-11",
+        "id": "a131",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Product Analyst",
+    "id": "w-3",
+    "name": "Riley Cohen",
+    "protected": {
+      "age_band": "50+",
+      "ethnicity": "Hispanic",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Cloud Architecture",
+      "Python"
+    ],
+    "tenure_years": 5
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-05-10",
+        "id": "a140",
+        "text": "led mentored roadmap",
+        "type": "pr"
+      },
+      {
+        "date": "2026-05-11",
+        "id": "a141",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Software Engineer",
+    "id": "w-4",
+    "name": "Casey Wong",
+    "protected": {
+      "age_band": "20-29",
+      "ethnicity": "White",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Technical Leadership",
+      "Python"
+    ],
+    "tenure_years": 6
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-01-10",
+        "id": "a150",
+        "text": "react typescript ui",
+        "type": "pr"
+      },
+      {
+        "date": "2026-01-11",
+        "id": "a151",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Data Engineer",
+    "id": "w-5",
+    "name": "Drew Olsen",
+    "protected": {
+      "age_band": "30-39",
+      "ethnicity": "Black",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Frontend",
+      "Python"
+    ],
+    "tenure_years": 7
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-02-10",
+        "id": "a160",
+        "text": "python pandas pytest refactor",
+        "type": "pr"
+      },
+      {
+        "date": "2026-02-11",
+        "id": "a161",
+        "text": "model training scikit",
+        "type": "commit"
+      }
+    ],
+    "current_role": "ML Engineer",
+    "id": "w-6",
+    "name": "Taylor Reed",
+    "protected": {
+      "age_band": "40-49",
+      "ethnicity": "Asian",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "tenure_years": 8
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-03-10",
+        "id": "a170",
+        "text": "python pandas pytest refactor",
+        "type": "pr"
+      },
+      {
+        "date": "2026-03-11",
+        "id": "a171",
+        "text": "llm prompt rag agent",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Product Analyst",
+    "id": "w-7",
+    "name": "Jamie Ford",
+    "protected": {
+      "age_band": "50+",
+      "ethnicity": "Hispanic",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Python",
+      "LLM Engineering"
+    ],
+    "tenure_years": 9
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-04-10",
+        "id": "a180",
+        "text": "sql etl pipeline dbt",
+        "type": "pr"
+      },
+      {
+        "date": "2026-04-11",
+        "id": "a181",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Software Engineer",
+    "id": "w-8",
+    "name": "Morgan Diaz",
+    "protected": {
+      "age_band": "20-29",
+      "ethnicity": "White",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Data Engineering",
+      "Python"
+    ],
+    "tenure_years": 2
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-05-10",
+        "id": "a190",
+        "text": "aws terraform bedrock infra",
+        "type": "pr"
+      },
+      {
+        "date": "2026-05-11",
+        "id": "a191",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "Data Engineer",
+    "id": "w-9",
+    "name": "Avery Singh",
+    "protected": {
+      "age_band": "30-39",
+      "ethnicity": "Black",
+      "gender": "F"
+    },
+    "self_reported_skills": [
+      "Cloud Architecture",
+      "Python"
+    ],
+    "tenure_years": 3
+  },
+  {
+    "artifacts": [
+      {
+        "date": "2026-01-10",
+        "id": "a200",
+        "text": "led mentored roadmap",
+        "type": "pr"
+      },
+      {
+        "date": "2026-01-11",
+        "id": "a201",
+        "text": "python pandas pytest refactor",
+        "type": "commit"
+      }
+    ],
+    "current_role": "ML Engineer",
+    "id": "w-10",
+    "name": "Pat Nolan",
+    "protected": {
+      "age_band": "40-49",
+      "ethnicity": "Asian",
+      "gender": "M"
+    },
+    "self_reported_skills": [
+      "Technical Leadership",
+      "Python"
+    ],
+    "tenure_years": 4
+  }
+]
