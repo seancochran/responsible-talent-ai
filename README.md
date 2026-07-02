@@ -29,6 +29,7 @@ that layer looks like, tool by tool.
 | Tool | What it does | Status |
 |------|--------------|--------|
 | [**Bias & Adverse-Impact Auditor**](tools/bias-auditor/) | Upload hiring/promotion CSV → selection rates, EEOC four-fifths impact ratios, two-proportion z-test significance, small-sample flags, downloadable audit report + optional LLM stakeholder narrative. | ✅ Complete, tested, demo-ready |
+| [**Roster**](tools/roster/) | Evidence-grounded skills + fair right-seat matching with a counterfactual fairness red-team, auditable decision records, and an outcomes dashboard. Trust layer over Workday + Eightfold. | ✅ Complete, tested, demo-ready |
 | **Internal Mobility & Skills Match** | Rank best-fit internal roles for an employee by skill adjacency, *explain* each match, and run an adverse-impact check on *who gets surfaced* by group. | 🔜 Next |
 | **Coaching / Interview-Practice bot** | Rehearse an interview/coaching scenario against a simulated persona; get rubric-scored feedback + improvement tips. | 📋 Backlog |
 | **Workforce Trust screener** | Surface anomaly / authenticity signals across applications (identity-drift, inconsistency, AI-generated-text) into a first-pass human review note. | 📋 Backlog |
